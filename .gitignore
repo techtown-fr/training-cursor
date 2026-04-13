@@ -1,0 +1,6 @@
+node_modules/
+dist/
+.output/
+components.d.ts
+exercices/pdf/
+slides.pdf

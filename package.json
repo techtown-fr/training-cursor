@@ -1,0 +1,31 @@
+{
+  "name": "training-TRAINING_NAME",
+  "private": true,
+  "scripts": {
+    "dev": "slidev",
+    "build": "slidev build",
+    "export": "slidev export",
+    "lint": "markdownlint-cli2 'pages/**/*.md' 'exercices/**/*.md' 'slides.md'",
+    "lint:fix": "markdownlint-cli2 --fix 'pages/**/*.md' 'exercices/**/*.md' 'slides.md'",
+    "validate": "npm run lint && npm run build",
+    "prepare": "husky"
+  },
+  "engines": {
+    "node": ">=24.0.0"
+  },
+  "lint-staged": {
+    "*.md": [
+      "markdownlint-cli2"
+    ]
+  },
+  "dependencies": {
+    "@slidev/cli": "^52.14.1",
+    "slidev-theme-techtown": "github:techtown-fr/slidev-theme"
+  },
+  "devDependencies": {
+    "husky": "^9.1.7",
+    "lint-staged": "^16.4.0",
+    "markdownlint-cli2": "^0.22.0",
+    "playwright-chromium": "^1.58.2"
+  }
+}

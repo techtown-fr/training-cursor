@@ -1,0 +1,37 @@
+name: Export PDF
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - "slides.md"
+      - "pages/**"
+
+permissions:
+  contents: write
+
+jobs:
+  export:
+    name: Export Slides PDF
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "24"
+          cache: "npm"
+
+      - run: npm ci
+      - run: npx playwright install chromium --with-deps
+
+      - name: Export PDF
+        run: npx slidev export --output slides.pdf
+
+      - name: Upload PDF artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: slides-pdf
+          path: slides.pdf
+          retention-days: 30

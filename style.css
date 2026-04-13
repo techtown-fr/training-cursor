@@ -1,0 +1,68 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+:root {
+  --slidev-theme-primary: #1c63ed;
+  --slidev-theme-accents-yellow: #f59e0b;
+  --slidev-theme-accents-red: #e4405f;
+  --slidev-theme-accents-teal: #10b981;
+}
+
+.slidev-layout {
+  font-family: 'Poppins', sans-serif;
+  color: #1f2937;
+}
+
+h1 {
+  color: #1c63ed !important;
+  font-weight: 700 !important;
+}
+
+h2 {
+  color: #1f2937 !important;
+  font-weight: 600 !important;
+}
+
+a {
+  color: #1c63ed !important;
+}
+
+.slidev-code code {
+  font-size: 0.9em !important;
+}
+
+/* Cover slide */
+.slidev-layout.cover h1 {
+  color: #ffffff !important;
+}
+
+.slidev-layout.cover,
+.slidev-layout.intro {
+  background: linear-gradient(135deg, #1c63ed 0%, #1557d6 50%, #3b7eff 100%) !important;
+  color: #ffffff !important;
+}
+
+.slidev-layout.cover p,
+.slidev-layout.intro p {
+  color: rgba(255, 255, 255, 0.85) !important;
+}
+
+/* Center layout */
+.slidev-layout.center h1 {
+  color: #1c63ed !important;
+}
+
+/* Code blocks */
+.slidev-code {
+  border-radius: 0.5rem !important;
+}
+
+/* Lists */
+li::marker {
+  color: #1c63ed;
+}
+
+/* Strong text */
+strong {
+  color: #1c63ed;
+  font-weight: 600;
+}

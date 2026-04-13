@@ -1,0 +1,171 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+permissions:
+  contents: read
+
+jobs:
+  lint:
+    name: Lint & Static Analysis
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "24"
+          cache: "npm"
+
+      - run: npm ci
+
+      - name: Check Markdown formatting
+        run: npx markdownlint-cli2 "pages/**/*.md" "exercices/**/*.md" "slides.md" || true
+
+      - name: Check for broken slide imports
+        run: |
+          # Verify all src imports in slides.md exist
+          grep -oP '(?<=src: ).*' slides.md | while read -r file; do
+            if [ ! -f "$file" ]; then
+              echo "❌ Missing file: $file"
+              exit 1
+            fi
+          done
+          echo "✅ All slide imports valid"
+
+      - name: Validate slide frontmatter
+        run: |
+          # Check for common Slidev issues
+          for file in pages/*.md; do
+            if ! head -1 "$file" | grep -q "^---$"; then
+              echo "❌ $file: Missing frontmatter"
+              exit 1
+            fi
+          done
+          echo "✅ All slide files have valid frontmatter"
+
+  build:
+    name: Build Slides
+    runs-on: ubuntu-latest
+    needs: lint
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "24"
+          cache: "npm"
+
+      - run: npm ci
+
+      - name: Build Slidev presentation
+        run: npm run build
+
+      - name: Verify build output
+        run: |
+          if [ ! -f "dist/index.html" ]; then
+            echo "❌ Build failed: dist/index.html not found"
+            exit 1
+          fi
+          echo "✅ Build successful"
+          du -sh dist
+
+      - name: Upload build artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: slidev-dist
+          path: dist/
+          retention-days: 7
+
+  deploy-preview:
+    name: Deploy Preview (PR)
+    runs-on: ubuntu-latest
+    needs: build
+    if: github.event_name == 'pull_request'
+    permissions:
+      contents: read
+      checks: write
+      pull-requests: write
+      id-token: write
+    steps:
+      - uses: actions/checkout@v4
+
+      - id: auth
+        uses: google-github-actions/auth@v2
+        with:
+          workload_identity_provider: ${{ secrets.GCP_WORKLOAD_IDENTITY_PROVIDER }}
+          service_account: ${{ secrets.GCP_SERVICE_ACCOUNT }}
+
+      - uses: actions/download-artifact@v4
+        with:
+          name: slidev-dist
+          path: dist/
+
+      - name: Deploy to Firebase preview channel
+        id: deploy
+        run: |
+          FIREBASE_PROJECT="${{ vars.FIREBASE_PROJECT_ID }}"
+          OUTPUT=$(npx firebase-tools hosting:channel:deploy pr-${{ github.event.number }} --project "$FIREBASE_PROJECT" --expires 7d --json)
+          URL=$(echo "$OUTPUT" | jq -r ".result[\"$FIREBASE_PROJECT\"].url // empty")
+          if [ -z "$URL" ]; then
+            URL=$(echo "$OUTPUT" | jq -r '.. | .url? // empty' | head -1)
+          fi
+          echo "preview_url=$URL" >> "$GITHUB_OUTPUT"
+          echo "Preview URL: $URL"
+
+      - name: Comment PR with preview URL
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const url = '${{ steps.deploy.outputs.preview_url }}';
+            const body = `### 🔥 Firebase Preview Deploy\n\n**Preview URL:** ${url}\n\n_Expires in 7 days. Updated on every push to this PR._`;
+            const { data: comments } = await github.rest.issues.listComments({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              issue_number: context.issue.number,
+            });
+            const existing = comments.find(c => c.body.includes('Firebase Preview Deploy'));
+            if (existing) {
+              await github.rest.issues.updateComment({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                comment_id: existing.id,
+                body,
+              });
+            } else {
+              await github.rest.issues.createComment({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                issue_number: context.issue.number,
+                body,
+              });
+            }
+
+  deploy-production:
+    name: Deploy Production
+    runs-on: ubuntu-latest
+    needs: build
+    if: github.ref == 'refs/heads/main' && github.event_name == 'push'
+    permissions:
+      contents: read
+      id-token: write
+    steps:
+      - uses: actions/checkout@v4
+
+      - id: auth
+        uses: google-github-actions/auth@v2
+        with:
+          workload_identity_provider: ${{ secrets.GCP_WORKLOAD_IDENTITY_PROVIDER }}
+          service_account: ${{ secrets.GCP_SERVICE_ACCOUNT }}
+
+      - uses: actions/download-artifact@v4
+        with:
+          name: slidev-dist
+          path: dist/
+
+      - name: Deploy to Firebase production
+        run: npx firebase-tools deploy --only hosting --project ${{ vars.FIREBASE_PROJECT_ID }}

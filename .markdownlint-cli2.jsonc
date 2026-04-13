@@ -1,0 +1,63 @@
+{
+  "config": {
+    // Slidev-specific: HTML in Markdown (Vue components)
+    "MD033": false,
+    // Slidev: duplicate headings across slides
+    "MD024": false,
+    // Line length — impractical for slides with inline styles
+    "MD013": false,
+    // Trailing spaces
+    "MD009": false,
+    // Multiple blank lines (slide separators ---)
+    "MD012": false,
+    // No blank line before list
+    "MD032": false,
+    // Emphasis as heading
+    "MD036": false,
+    // Bare URLs
+    "MD034": false,
+    // First line not heading (frontmatter)
+    "MD041": false,
+    // Non-standard heading style
+    "MD003": false,
+    // Multiple H1 (exercices have YAML title + H1)
+    "MD025": false,
+    // Blank lines inside blockquote
+    "MD028": false,
+    // Fenced code blocks blanks
+    "MD031": false,
+    // Table column style
+    "MD060": false,
+    // No trailing punctuation in headings
+    "MD026": false,
+    // Ordered list prefix
+    "MD029": false,
+    // Blanks around headings
+    "MD022": false,
+    // Blanks around lists
+    "MD030": false,
+    // Code block style
+    "MD046": false,
+    // Link fragments
+    "MD051": false,
+    // No space after hash in heading
+    "MD018": false,
+    // Heading increment
+    "MD001": false,
+    // Hard tabs
+    "MD010": false,
+    // No space inside code span
+    "MD038": false,
+    // Fenced code language
+    "MD040": false,
+    // No empty links
+    "MD042": false,
+    // Alt text on images (decorative in Slidev)
+    "MD045": false
+  },
+  "ignores": [
+    "node_modules/**",
+    "dist/**",
+    "MEMORY/**"
+  ]
+}
