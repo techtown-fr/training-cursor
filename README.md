@@ -1,99 +1,98 @@
-# training-template — Template de formation TechTown
+# training-template — TechTown Training Template
 
-Template de base pour créer une nouvelle formation TechTown avec Slidev.
+Base template for creating a new TechTown training session with Slidev.
 
-## Utilisation du template
+## Using this template
 
-### 1. Cloner ou dupliquer ce repo
-
-```bash
-# Option A : utiliser comme template GitHub
-# Cliquer sur "Use this template" sur GitHub
-
-# Option B : cloner manuellement
-git clone https://github.com/techtown-fr/training-template training-[NOM]
-cd training-[NOM]
-git remote set-url origin https://github.com/techtown-fr/training-[NOM].git
-```
-
-### 2. Personnaliser
-
-Remplacer toutes les occurrences de `[TITRE DE LA FORMATION]` et `TRAINING_NAME` :
+### 1. Clone or duplicate this repo
 
 ```bash
-# package.json
-# slides.md
-# CLAUDE.md, PLAN.md, REFERENCES.md
-# exercices/README.md
-# exercices/01-exemple.md
+# Option A: use as a GitHub template
+# Click "Use this template" on GitHub
+
+# Option B: clone manually
+git clone https://github.com/techtown-fr/training-template training-[NAME]
+cd training-[NAME]
+git remote set-url origin https://github.com/techtown-fr/training-[NAME].git
 ```
 
-### 3. Configurer Firebase
+### 2. Customize
 
-1. Créer un projet Firebase : [console.firebase.google.com](https://console.firebase.google.com)
-2. Mettre à jour `.firebaserc` avec le vrai project ID
-3. Configurer les secrets et variables GitHub Actions (voir [docs/firebase-setup.md](docs/firebase-setup.md))
+Replace all occurrences of `[TITRE DE LA FORMATION]` and `TRAINING_NAME`:
 
-### 4. Installer et démarrer
+```
+package.json
+slides.md
+CLAUDE.md, PLAN.md, REFERENCES.md
+exercices/README.md
+exercices/01-exemple.md
+```
+
+### 3. Configure Firebase
+
+1. Create a Firebase project: [console.firebase.google.com](https://console.firebase.google.com)
+2. Update `.firebaserc` with the real project ID
+3. Configure GitHub Actions secrets and variables (see [docs/firebase-setup.md](docs/firebase-setup.md))
+
+### 4. Install and start
 
 ```bash
 npm install
 npm run dev
 ```
 
-## Structure du projet
+## Project structure
 
 ```
 .
-├── slides.md               # Point d'entrée Slidev
-├── pages/                  # Slides par section
-│   ├── 01-formateurs.md    # Présentation des formateurs
-│   ├── 02-introductions.md # Tour de table
-│   ├── 03-programme.md     # Programme de la formation
-│   ├── 04-techtown.md      # Présentation TechTown + infos pratiques
-│   └── 99-merci.md         # Slide de fin
-├── exercices/              # TPs pratiques
-│   ├── README.md           # Index des exercices
-│   ├── 01-exemple.md       # Template d'exercice
-│   ├── export-pdf.sh       # Script de génération PDF
-│   └── techtown-template.tex # Template LaTeX pour les PDFs
-├── public/                 # Assets statiques
-│   └── (vide — assets de la formation uniquement)
-├── global-top.vue          # En-tête fixe (logo)
-├── global-bottom.vue       # Pied de page fixe (titre + pagination)
-├── style.css               # Styles TechTown
-├── CLAUDE.md               # Contexte projet pour Claude Code
-├── PLAN.md                 # Plan pédagogique détaillé
-└── REFERENCES.md           # Ressources et liens utiles
+├── slides.md               # Slidev entry point
+├── pages/                  # Slides by section
+│   ├── 01-formateurs.md    # Trainers introduction
+│   ├── 02-introductions.md # Round table
+│   ├── 03-programme.md     # Training programme
+│   ├── 04-techtown.md      # TechTown presentation + logistics
+│   └── 99-merci.md         # Closing slide
+├── exercices/              # Hands-on exercises
+│   ├── README.md           # Exercise index
+│   ├── 01-exemple.md       # Exercise template
+│   ├── export-pdf.sh       # PDF generation script
+│   └── techtown-template.tex # LaTeX template for PDFs
+├── public/                 # Static assets (training-specific only)
+├── global-top.vue          # Persistent header (logo)
+├── global-bottom.vue       # Persistent footer (title + pagination)
+├── style.css               # TechTown brand styles
+├── CLAUDE.md               # Project context for Claude Code
+├── PLAN.md                 # Detailed training plan
+└── REFERENCES.md           # Resources and useful links
 ```
 
-## Commandes disponibles
+## Available commands
 
-| Commande | Description |
-|----------|-------------|
-| `npm run dev` | Démarrer le serveur de développement (localhost:3030) |
-| `npm run build` | Build de production (→ dist/) |
-| `npm run export` | Exporter en PDF |
-| `npm run lint` | Vérifier le formatage Markdown |
-| `npm run lint:fix` | Corriger le formatage automatiquement |
-| `npm run validate` | Lint + build (pré-déploiement) |
+| Command | Description |
+|---------|-------------|
+| `npm run dev` | Start dev server (localhost:3030) |
+| `npm run build` | Production build (→ dist/) |
+| `npm run export` | Export slides to PDF |
+| `npm run lint` | Check Markdown formatting |
+| `npm run lint:fix` | Auto-fix Markdown formatting |
+| `npm run validate` | Lint + build (pre-deployment check) |
 
 ## CI/CD
 
-Le pipeline GitHub Actions effectue automatiquement :
+The GitHub Actions pipeline automatically runs:
 
-- **Lint** : vérification du Markdown et des imports de slides
-- **Build** : compilation Slidev
-- **Preview** : déploiement Firebase sur les PRs (URL temporaire 7 jours)
-- **Production** : déploiement Firebase sur merge vers `main`
+- **Lint** — Markdown formatting and slide import checks
+- **Build** — Slidev compilation
+- **Preview** — Firebase deploy on PRs (temporary URL, 7-day expiry)
+- **Production** — Firebase deploy on merge to `main`
 
-Voir [docs/firebase-setup.md](docs/firebase-setup.md) pour la configuration complète.
+See [docs/firebase-setup.md](docs/firebase-setup.md) for the full setup guide.
 
-## Branding TechTown
+## TechTown branding
 
-- Police : **Poppins**
-- Couleur primaire : `#1c63ed`
-- Cover/intro : gradient `135deg #1c63ed → #1557d6 → #3b7eff`
-- Logo : fourni par le thème `slidev-theme-techtown` (pas à dupliquer dans `public/`)
+- Font: **Poppins**
+- Primary color: `#1c63ed`
+- Cover/intro: gradient `135deg #1c63ed → #1557d6 → #3b7eff`
+- Logo: provided by `slidev-theme-techtown` — do not copy into `public/`
 
-Ne pas modifier le branding sans validation de l'équipe TechTown.
+Do not modify the branding without approval from the TechTown team.
