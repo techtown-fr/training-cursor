@@ -115,6 +115,7 @@ firebase deploy --only hosting --project techtown-training-[NOM]
 | Formation | Firebase Project | URL |
 |-----------|-----------------|-----|
 | Claude Code | `techtown-training-cc` | https://techtown-training-cc.web.app |
+| Cursor | `techtown-training-cursor` | https://techtown-training-cursor.web.app |
 
 ## Troubleshooting
 
