@@ -5,6 +5,10 @@
     "dev": "slidev",
     "build": "slidev build",
     "export": "slidev export",
+    "pdf:all": "node scripts/generate-pdfs.mjs all",
+    "pdf:slides": "node scripts/generate-pdfs.mjs slides",
+    "pdf:exercices": "node scripts/generate-pdfs.mjs exercices",
+    "pdf:references": "node scripts/generate-pdfs.mjs references",
     "lint": "markdownlint-cli2 'pages/**/*.md' 'exercices/**/*.md' 'slides.md'",
     "lint:fix": "markdownlint-cli2 --fix 'pages/**/*.md' 'exercices/**/*.md' 'slides.md'",
     "validate": "npm run lint && npm run build",
@@ -26,6 +30,7 @@
     "husky": "^9.1.7",
     "lint-staged": "^16.4.0",
     "markdownlint-cli2": "^0.22.0",
+    "marked": "^18.0.5",
     "playwright-chromium": "^1.58.2"
   }
 }
