@@ -2,19 +2,19 @@
 layout: default
 ---
 
-# Programme <span class="text-sm opacity-60 ml-2">[Jour 1 ou description]</span>
+# Programme <span class="text-sm opacity-60 ml-2">Atelier 3h</span>
 
 <div class="grid grid-cols-2 gap-8 mt-4">
 
 <div>
 
-### Matin
+### Première partie
 
 <v-clicks>
 
-- **Section 1** — Description courte <span class="ml-2 text-xs bg-orange-100 text-orange-700 border border-orange-200 rounded px-1.5 py-0.5 font-semibold">TP 1</span>
-- **Section 2** — Description courte <span class="ml-2 text-xs bg-orange-100 text-orange-700 border border-orange-200 rounded px-1.5 py-0.5 font-semibold">TP 2</span>
-- **Section 3** — Description courte <span class="ml-2 text-xs bg-orange-100 text-orange-700 border border-orange-200 rounded px-1.5 py-0.5 font-semibold">TP 3</span>
+- **Fondations & pont Claude Code → Cursor**
+- **Découverte** — Tab, Inline Edit, Agent, contexte
+- **La doc dans le contexte** — `@Docs`, `@Web`, MCP <span class="ml-2 text-xs bg-orange-100 text-orange-700 border border-orange-200 rounded px-1.5 py-0.5 font-semibold">TP 1</span>
 
 </v-clicks>
 
@@ -22,13 +22,14 @@ layout: default
 
 <div>
 
-### Après-midi
+### Seconde partie
 
 <v-clicks>
 
-- **Section 4** — Description courte <span class="ml-2 text-xs bg-orange-100 text-orange-700 border border-orange-200 rounded px-1.5 py-0.5 font-semibold">TP 4</span>
-- **Section 5** — Description courte <span class="ml-2 text-xs bg-orange-100 text-orange-700 border border-orange-200 rounded px-1.5 py-0.5 font-semibold">TP 5</span>
-- **Section 6** — Description courte
+- **Composer 2.5** & partenariat SpaceX
+- **Historique de l'IDE**
+- **Canevas** — Design Mode & rapport de contexte <span class="ml-2 text-xs bg-orange-100 text-orange-700 border border-orange-200 rounded px-1.5 py-0.5 font-semibold">TP 2</span>
+- **Cursor Automations** & nouveautés
 
 </v-clicks>
 
@@ -36,8 +37,8 @@ layout: default
 
 </div>
 
-<div class="mt-4 text-sm opacity-70 text-center">
+<div class="mt-6 text-sm opacity-70 text-center">
 
-N TPs progressifs — [description du fil rouge]
+2 TP progressifs — fil rouge : une mini-app **SpaceX Launches** en HTML/JS
 
 </div>

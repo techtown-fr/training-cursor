@@ -1,63 +1,66 @@
-# Plan de formation — Cursor
+# Plan de formation — Cursor (Atelier 3h)
+
+Public : développeurs ayant suivi 2 jours de Claude Code.
+Angle : ce que Cursor apporte **en plus, nativement dans l'IDE**.
+Fil rouge : une mini-app **SpaceX Launches** (HTML/JS/`fetch`).
 
 ---
 
-## JOUR 1
+## Déroulé (180 min)
 
-### Matin (3h30)
-
-#### [Section 1] (Xmin)
-
-- Point 1
-- Point 2
-- Point 3
-
-**TP 1** : [Description du TP]
-
----
-
-#### [Section 2] (Xmin)
-
-- Point 1
-- Point 2
-
-**TP 2** : [Description du TP]
+| Durée | Séquence | Slides |
+|-------|----------|--------|
+| 10 min | Accueil + fondations + pont Claude Code → Cursor | 05 |
+| 20 min | Découverte : Tab, Inline Edit, Agent, contexte | 06 |
+| 10 min | La doc dans le contexte : `@Docs`, `@Web`, MCP | 07 |
+| 25 min | **TP 1** — mini-app SpaceX (doc + MCP) | — |
+| 15 min | Pause | — |
+| 25 min | Composer 2.5 + benchmark + partenariat SpaceX | 08 |
+| 10 min | Historique de l'IDE | 09 |
+| 15 min | Canevas (Design Mode, rapport de contexte) | 10 |
+| 25 min | **TP 2** — dashboard SpaceX en canevas | — |
+| 25 min | Automations + nouveautés + récap + Q&A | 11, 12, 13 |
 
 ---
 
-### Après-midi (3h30)
+## Sections
 
-#### [Section 3] (Xmin)
+### 1. Fondations & pont (slide 05)
 
-- Point 1
-- Point 2
+- IDE pensé pour l'IA, fork de VS Code, indexation par embeddings
+- Anysphere (fondé en 2022 par 4 étudiants du MIT), plugin JetBrains (ACP)
+- Ce qu'on garde de Claude Code / ce qui change
 
-**TP 3** : [Description du TP]
+### 2. Découverte (slide 06)
 
----
+- Tab, Inline Edit (Cmd+K), Agent (Ask vs Agent, Cmd+I)
+- Gestion du contexte (`@`, indexation, auto-summary)
 
-## JOUR 2 (si formation 2 jours)
+### 3. La doc (slide 07)
 
-### Matin (3h30)
+- Péremption des connaissances du modèle
+- `@Docs`, `@Web`, MCP (ex. context7)
 
-#### [Section 4] (Xmin)
+**TP 1** : scaffolder la mini-app SpaceX Launches en s'appuyant sur la doc.
 
-- Point 1
-- Point 2
+### 4. Composer 2.5 & SpaceX (slide 08)
 
-**TP 4** : [Description du TP]
+- Progression Composer → 1.5 → 2 → 2.5, benchmarks
+- Partenariat SpaceX : entraînement sur Colossus, deal 60 Md$
 
----
+### 5. Historique de l'IDE (slide 09)
 
-### Après-midi (3h30)
+- Historique chats/agents, checkpoints, restauration, reprise
 
-#### [Section 5] (Xmin)
+### 6. Canevas (slide 10)
 
-- Point 1
-- Point 2
+- Artefacts interactifs, Design Mode, rapport d'utilisation du contexte
 
-**TP Final** : [Challenge final — description]
+**TP 2** : transformer les données SpaceX en canevas interactif.
 
----
+### 7. Automations & nouveautés (slides 11-12)
 
-#### Debrief et Q&A
+- Cursor Automations (triggers, tools, cas d'usage)
+- Changelog : Bugbot, /review, Auto-review, plein écran, Design Mode navigateur
+
+### 8. Récap & Q&A (slide 13)
