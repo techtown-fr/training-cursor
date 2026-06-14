@@ -6,20 +6,22 @@ Fil rouge : une mini-app **SpaceX Launches** (HTML/JS/`fetch`).
 
 ---
 
-## Déroulé (180 min)
+## Déroulé (155 min)
 
 | Durée | Séquence | Slides |
 |-------|----------|--------|
 | 10 min | Accueil + fondations + pont Claude Code → Cursor | 05 |
 | 20 min | Découverte : Tab, Inline Edit, Agent, contexte | 06 |
-| 10 min | La doc dans le contexte : `@Docs`, `@Web`, MCP | 07 |
-| 25 min | **TP 1** — mini-app SpaceX (doc + MCP) | — |
+| 10 min | La doc dans le contexte : `@Docs`, MCP | 07 |
+| 15 min | **TP 1** — mini-app SpaceX (doc + MCP) | — |
 | 15 min | Pause | — |
 | 25 min | Composer 2.5 + benchmark + partenariat SpaceX | 08 |
 | 10 min | Historique de l'IDE | 09 |
-| 15 min | Canevas (Design Mode, rapport de contexte) | 10 |
-| 25 min | **TP 2** — dashboard SpaceX en canevas | — |
-| 25 min | Automations + nouveautés + récap + Q&A | 11, 12, 13 |
+| 10 min | Design Mode (itération visuelle sur le web) | 15 |
+| 15 min | **TP 2** — Design Mode sur l'app SpaceX | — |
+| 10 min | Canevas (artefacts, rapport de contexte) | 10 |
+| 15 min | **TP 3** — dashboard SpaceX en canevas | — |
+| 20 min | Automations + nouveautés + récap + Q&A | 11, 12, 13 |
 
 ---
 
@@ -39,7 +41,7 @@ Fil rouge : une mini-app **SpaceX Launches** (HTML/JS/`fetch`).
 ### 3. La doc (slide 07)
 
 - Péremption des connaissances du modèle
-- `@Docs`, `@Web`, MCP (ex. context7)
+- `@Docs`, `@Browser`, MCP (ex. context7)
 
 **TP 1** : scaffolder la mini-app SpaceX Launches en s'appuyant sur la doc.
 
@@ -52,15 +54,22 @@ Fil rouge : une mini-app **SpaceX Launches** (HTML/JS/`fetch`).
 
 - Historique chats/agents, checkpoints, restauration, reprise
 
-### 6. Canevas (slide 10)
+### 6. Design Mode (slide 15)
 
-- Artefacts interactifs, Design Mode, rapport d'utilisation du contexte
+- Itération visuelle : pointer/annoter un élément, l'agent édite le code
+- D'abord pour le **web** (apps réelles), aussi dans le canevas
 
-**TP 2** : transformer les données SpaceX en canevas interactif.
+**TP 2** : améliorer visuellement l'app SpaceX du TP 1 en Design Mode.
 
-### 7. Automations & nouveautés (slides 11-12)
+### 7. Canevas (slide 10)
+
+- Artefacts interactifs, rapport d'utilisation du contexte
+
+**TP 3** : transformer les données SpaceX en canevas interactif.
+
+### 8. Automations & nouveautés (slides 11-12)
 
 - Cursor Automations (triggers, tools, cas d'usage)
 - Changelog : Bugbot, /review, Auto-review, plein écran, Design Mode navigateur
 
-### 8. Récap & Q&A (slide 13)
+### 9. Récap & Q&A (slide 13)

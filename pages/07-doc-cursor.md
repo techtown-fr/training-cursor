@@ -4,7 +4,7 @@ layout: section
 
 # La doc au service du contexte
 
-`@Docs`, `@Web` et les serveurs MCP
+`@Docs`, recherche web et serveurs MCP
 
 ---
 layout: default
@@ -74,13 +74,13 @@ layout: default
 
 <div class="bg-blue-50 rounded-xl p-5">
 
-### `@Web`
+### Recherche web
 
 <v-clicks>
 
-- Recherche **en direct** sur le web
-- Idéal pour une info **ponctuelle**
-- Cite ses sources
+- L'agent **navigue le web** nativement
+- Pas de `@` nécessaire — il cherche seul
+- Ou via **`@Browser`** pour le navigateur intégré
 
 </v-clicks>
 
@@ -131,12 +131,12 @@ Scaffolder une mini-app **SpaceX Launches** en HTML/JS/<code>fetch</code>
 
 <div class="mt-4 inline-block bg-orange-100 text-orange-700 border border-orange-200 rounded-lg px-4 py-2 font-semibold">
 
-Fichier : <code>exercices/01-doc-mcp-spacex.md</code> · ~25 min
+Fichier : <code>exercices/01-doc-mcp-spacex.md</code> · ~15 min
 
 </div>
 
 <div class="mt-6 text-sm opacity-70">
 
-Objectif : utiliser `@Docs` / `@Web` / MCP pour consommer l'API SpaceX **à jour**.
+Objectif : utiliser `@Docs` / MCP pour consommer l'API SpaceX **à jour**.
 
 </div>

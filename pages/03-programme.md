@@ -12,9 +12,10 @@ layout: default
 
 <v-clicks>
 
+- **Historique de l'IDE**
 - **Fondations & pont Claude Code → Cursor**
 - **Découverte** — Tab, Inline Edit, Agent, contexte
-- **La doc dans le contexte** — `@Docs`, `@Web`, MCP <span class="ml-2 text-xs bg-orange-100 text-orange-700 border border-orange-200 rounded px-1.5 py-0.5 font-semibold">TP 1</span>
+- **La doc dans le contexte** — `@Docs`, MCP <span class="ml-2 text-xs bg-orange-100 text-orange-700 border border-orange-200 rounded px-1.5 py-0.5 font-semibold">TP 1</span>
 
 </v-clicks>
 
@@ -27,8 +28,8 @@ layout: default
 <v-clicks>
 
 - **Composer 2.5** & partenariat SpaceX
-- **Historique de l'IDE**
-- **Canevas** — Design Mode & rapport de contexte <span class="ml-2 text-xs bg-orange-100 text-orange-700 border border-orange-200 rounded px-1.5 py-0.5 font-semibold">TP 2</span>
+- **Design Mode** — itération visuelle sur le web <span class="ml-2 text-xs bg-orange-100 text-orange-700 border border-orange-200 rounded px-1.5 py-0.5 font-semibold">TP 2</span>
+- **Canevas** & rapport de contexte <span class="ml-2 text-xs bg-orange-100 text-orange-700 border border-orange-200 rounded px-1.5 py-0.5 font-semibold">TP 3</span>
 - **Cursor Automations** & nouveautés
 
 </v-clicks>
@@ -39,6 +40,6 @@ layout: default
 
 <div class="mt-6 text-sm opacity-70 text-center">
 
-2 TP progressifs — fil rouge : une mini-app **SpaceX Launches** en HTML/JS
+3 TP progressifs — fil rouge : une mini-app **SpaceX Launches** en HTML/JS
 
 </div>

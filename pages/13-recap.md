@@ -1,4 +1,14 @@
 ---
+layout: section
+---
+
+# Pour aller plus loin
+
+Des cursus de formation officiels proposés par Cursor
+
+[Documentation Agent](https://cursor.com/fr/docs/agent/overview)
+
+---
 layout: default
 ---
 
@@ -14,9 +24,9 @@ layout: default
 
 - Les **fondations** : IDE IA, fork VS Code, indexation
 - **Tab / Cmd+K / Agent** : les 3 niveaux d'autonomie
-- La **doc** dans le contexte (`@Docs`, `@Web`, MCP)
+- La **doc** dans le contexte (`@Docs`, MCP)
 - **Composer 2.5** & le partenariat SpaceX
-- **Historique**, **canevas**, **automations**
+- **Historique**, **canevas**, **Design Mode**, **automations**
 
 </v-clicks>
 

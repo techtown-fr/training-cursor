@@ -128,7 +128,7 @@ layout: default
 - On **alimente** le contexte avec `@` :
   - `@Fichiers` / `@Dossiers`
   - `@Code` / symboles
-  - `@Docs` / `@Web`
+  - `@Docs` / `@Browser`
 - **Indexation** de la codebase en arrière-plan
 
 </v-clicks>
