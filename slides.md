@@ -41,6 +41,10 @@ src: ./pages/06-decouverte-cursor.md
 ---
 
 ---
+src: ./pages/09-historique-ide.md
+---
+
+---
 src: ./pages/07-doc-cursor.md
 ---
 
@@ -49,7 +53,11 @@ src: ./pages/08-composer-2-5.md
 ---
 
 ---
-src: ./pages/09-historique-ide.md
+src: ./pages/14-dashboard-usage.md
+---
+
+---
+src: ./pages/15-design-mode.md
 ---
 
 ---
