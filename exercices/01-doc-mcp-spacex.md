@@ -10,7 +10,7 @@ date: 2026
 ## Objectif
 
 Construire une mini-app web **SpaceX Launches** en HTML/JS/`fetch`, en s'appuyant sur
-`@Docs`, `@Web` et un serveur MCP pour consommer l'**API SpaceX à jour** plutôt que de
+`@Docs` et un serveur MCP pour consommer l'**API SpaceX à jour** plutôt que de
 se fier à la seule mémoire du modèle.
 
 ## Prérequis
@@ -24,14 +24,19 @@ se fier à la seule mémoire du modèle.
 
 Avant de coder, on **donne la doc** à Cursor.
 
-1. Ouvrez un nouveau chat Agent (`Cmd+I`).
-2. Ajoutez la doc de l'API via `@Web` ou `@Docs` :
+1. Ouvrez les **Settings** de Cursor (`Cmd+,`), section **Indexing & Docs**.
+2. Ajoutez une source de documentation avec les valeurs suivantes :
 
-```text
-@Web documentation API SpaceX api.spacexdata.com latest launches
-```
+| Champ | Valeur |
+|-------|--------|
+| **@ Name** | `SpaceX API` |
+| **Prefix** | `https://api.spacexdata.com` |
+| **Entrypoint** | `https://api.spacexdata.com` |
 
-3. Demandez à l'agent de **confirmer les endpoints** à utiliser :
+![Configuration Indexing & Docs pour l'API SpaceX](assets/spacex-api-indexing-docs.png)
+
+3. Ouvrez un nouveau chat Agent (`Cmd+I`) et référencez la doc via `@Docs` → **SpaceX API**.
+4. Demandez à l'agent de **confirmer les endpoints** à utiliser :
 
 ```text
 Quels endpoints de l'API SpaceX (v4/v5) permettent de récupérer
@@ -61,13 +66,13 @@ sous forme de cartes (nom, date formatée en français, statut).
 Gère le cas où une donnée est absente.
 ```
 
-> **Note** : utilisez `@Docs`/`@Web` si l'agent hésite sur le format de la réponse.
+> **Note** : utilisez `@Docs` ou ajoutez l'URL de l'API si l'agent hésite sur le format de la réponse.
 
 <br>
 
 ## Checklist de validation
 
-- [ ] J'ai ajouté la doc de l'API au contexte (`@Web` ou `@Docs`)
+- [ ] J'ai ajouté la doc de l'API dans **Indexing & Docs** et l'ai référencée via `@Docs`
 - [ ] `index.html` affiche le **dernier lancement** SpaceX
 - [ ] La liste des **10 derniers lancements** s'affiche en cartes
 - [ ] Les dates sont formatées en français et les cas manquants gérés
