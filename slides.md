@@ -35,7 +35,7 @@ src: ./pages/04-techtown.md
 <!-- ============================================ -->
 <!-- AJOUTEZ VOS SECTIONS ICI                     -->
 <!-- Exemple :                                    -->
-<!--   src: ./pages/05-section.md                 -->
+<!-- Exemple : ./pages/05-section.md              -->
 <!-- ============================================ -->
 
 ---
