@@ -31,14 +31,14 @@ layout: default
 
 <div>
 
-### Design Mode
+### Différence avec un fichier
 
 <v-clicks>
 
-- **Sélectionnez et annotez** un élément d'interface
-- Comme dans un navigateur : on **pointe**, on commente
-- Cursor modifie le code derrière
-- Itération visuelle, beaucoup plus rapide
+- Pas un simple `.html` ou `.md` dans le repo
+- Interface **vivante**, manipulable dans Cursor
+- Idéal pour **visualiser des données** ou prototyper
+- Complète vos fichiers source, ne les remplace pas
 
 </v-clicks>
 
@@ -48,7 +48,7 @@ layout: default
 
 <div class="mt-6 p-3 bg-blue-50 rounded-xl text-sm text-center">
 
-Au lieu de **décrire** la modif par écrit, vous la **montrez**.
+Demandez explicitement un **canevas** à l'agent plutôt qu'un fichier statique.
 
 </div>
 
@@ -103,17 +103,17 @@ layout: center
 class: text-center
 ---
 
-# TP 2 — Un dashboard SpaceX en canevas
+# TP 3 — Un dashboard SpaceX en canevas
 
 <div class="mt-6 text-lg">
 
-Transformer les données SpaceX en **canevas interactif**, itérer en **Design Mode**
+Transformer les données SpaceX en **canevas interactif** + rapport de contexte
 
 </div>
 
 <div class="mt-4 inline-block bg-orange-100 text-orange-700 border border-orange-200 rounded-lg px-4 py-2 font-semibold">
 
-Fichier : <code>exercices/02-canvas-spacex.md</code> · ~25 min
+Fichier : <code>exercices/03-canvas-spacex.md</code> · ~15 min
 
 </div>
 

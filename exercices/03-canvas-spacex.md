@@ -1,22 +1,22 @@
 ---
-title: "TP 2 — Un dashboard SpaceX en canevas"
+title: "TP 3 — Un dashboard SpaceX en canevas"
 subtitle: "Formation : Cursor"
 author: TechTown
 date: 2026
 ---
 
-# TP 2 — Un dashboard SpaceX en canevas
+# TP 3 — Un dashboard SpaceX en canevas
 
 ## Objectif
 
-Transformer les données SpaceX du TP 1 en **canevas interactif** (dashboard des
-lancements), itérer dessus avec le **Design Mode**, inspecter le **rapport
-d'utilisation du contexte**, et esquisser une **Automation** Cursor.
+Transformer les données SpaceX des TP 1 et 2 en **canevas interactif** (dashboard
+des lancements), inspecter le **rapport d'utilisation du contexte**, et esquisser
+une **Automation** Cursor.
 
 ## Prérequis
 
-- TP 1 terminé (mini-app SpaceX fonctionnelle)
-- Cursor 3.7+ (canevas + Design Mode)
+- TP 1 et TP 2 terminés (mini-app SpaceX fonctionnelle et stylée)
+- Cursor 3.7+ (canevas + rapport de contexte)
 
 ## Exercice 1 — Générer un canevas
 
@@ -31,19 +31,18 @@ une liste filtrable et un graphique des lancements par année.
 Ouvrez le canevas, puis affichez-le en **plein écran** pour le présenter.
 
 > **Note** : un canevas est un artefact interactif partageable avec l'équipe.
+> Vous pouvez réutiliser les réflexes de **Design Mode** vus au TP 2 pour l'ajuster.
 
-## Exercice 2 — Itérer en Design Mode
+## Exercice 2 — Enrichir le tableau de bord
 
-1. Activez le **Design Mode** dans le canevas.
-2. **Sélectionnez** un élément (ex. une carte de lancement) et **annotez-le**
-   directement, sans tout décrire par écrit :
+Itérez sur le canevas pour le rendre exploitable en réunion.
 
 ```text
-Rends ces cartes plus lisibles : badge de statut coloré,
-logo de la mission, et tri par date décroissante.
+Ajoute au dashboard : un filtre par année, un taux de réussite global,
+et le tri des lancements par date décroissante.
 ```
 
-3. Vérifiez que Cursor applique la modification.
+Vérifiez que les indicateurs se recalculent quand on change le filtre.
 
 ## Exercice 3 — Rapport d'utilisation du contexte
 
@@ -66,7 +65,7 @@ Quels trigger et tools faut-il activer ?
 ## Checklist de validation
 
 - [ ] Un **canevas** interactif affiche le dashboard des lancements
-- [ ] J'ai itéré via le **Design Mode** (annotation visuelle)
+- [ ] Le tableau de bord propose **filtre, taux de réussite et tri**
 - [ ] J'ai consulté le **rapport d'utilisation du contexte**
 - [ ] J'ai identifié au moins une piste de réduction du contexte
 - [ ] (Bonus) J'ai décrit une Automation (trigger + tools)
