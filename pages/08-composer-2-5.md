@@ -56,6 +56,47 @@ Quand le choisir ? Pour itérer **vite** en mode agent. Pour un raisonnement tr�
 layout: default
 ---
 
+# Leader Gartner Magic Quadrant 2026
+
+<div class="grid grid-cols-2 gap-6 mt-2">
+
+<div>
+
+### Agents de codage IA d'entreprise
+
+<v-clicks>
+
+- **Leader** du Magic Quadrant™ Gartner 2026
+- Positionnement **le plus à droite** sur « Completeness of Vision »
+- **70 %+** des entreprises Fortune 500 utilisent Cursor
+- Vision : les devs **orchestrent des équipes d'agents** sur tout le SDLC
+
+</v-clicks>
+
+<div class="mt-4 p-3 bg-blue-50 rounded-xl text-sm">
+
+**Priorités 2026 :** intelligence de pointe (Composer 2.5), automatisation SDLC (Bugbot, Automations, SDK), contrôles Enterprise.
+
+</div>
+
+</div>
+
+<div class="flex items-center justify-center">
+  <img :src="'/gartner-mq-2026.png'" alt="Gartner Magic Quadrant 2026 — Enterprise AI Coding Agents" class="rounded-lg shadow-lg max-h-80" />
+</div>
+
+</div>
+
+<div class="mt-2 text-xs opacity-60 text-center">
+
+Source : [cursor.com/fr/blog/cursor-leads-gartner-mq-2026](https://cursor.com/fr/blog/cursor-leads-gartner-mq-2026) · Gartner, 20 mai 2026
+
+</div>
+
+---
+layout: default
+---
+
 # Composer 2.5 — Benchmarks
 
 <div class="flex justify-center mt-2">
