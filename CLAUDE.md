@@ -1,4 +1,4 @@
-# Projet : Formation "[TITRE DE LA FORMATION]"
+# Projet : Formation "Cursor"
 
 Présentation Slidev pour une formation TechTown. Langue : français.
 

@@ -1,4 +1,4 @@
-# Exercices — [TITRE DE LA FORMATION]
+# Exercices — Cursor
 
 ## Structure
 

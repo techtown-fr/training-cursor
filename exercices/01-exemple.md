@@ -1,6 +1,6 @@
 ---
 title: "TP 1 — [Titre du TP]"
-subtitle: "Formation : [TITRE DE LA FORMATION]"
+subtitle: "Formation : Cursor"
 author: TechTown
 date: 2026
 ---

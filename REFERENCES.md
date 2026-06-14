@@ -1,6 +1,6 @@
 # Références
 
-Ressources de référence pour la formation **[TITRE DE LA FORMATION]**.
+Ressources de référence pour la formation **Cursor**.
 
 ## Documentation officielle
 

@@ -1,8 +1,8 @@
 ---
 theme: slidev-theme-techtown
-title: "Formation — [TITRE DE LA FORMATION]"
+title: "Formation — Cursor"
 info: |
-  ## [TITRE DE LA FORMATION]
+  ## Cursor
   Par TechTown
 highlighter: shiki
 drawings:
@@ -12,7 +12,7 @@ mdc: true
 layout: cover
 ---
 
-# [TITRE DE LA FORMATION]
+# Cursor
 
 [Sous-titre — niveau ou angle]
 

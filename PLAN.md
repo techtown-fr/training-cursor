@@ -1,4 +1,4 @@
-# Plan de formation — [TITRE DE LA FORMATION]
+# Plan de formation — Cursor
 
 ---
 

@@ -1,5 +1,5 @@
 {
-  "name": "training-TRAINING_NAME",
+  "name": "training-cursor",
   "private": true,
   "scripts": {
     "dev": "slidev",
