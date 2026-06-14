@@ -57,6 +57,24 @@ Présentation Slidev pour une formation TechTown. Langue : français.
 - **Auth** : Workload Identity Federation via secrets GitHub (`GCP_WORKLOAD_IDENTITY_PROVIDER`, `GCP_SERVICE_ACCOUNT`)
 - **Variable** : `FIREBASE_PROJECT_ID` à configurer dans les variables GitHub Actions
 
+## Conventions de commit (gitmoji)
+
+- Format des messages : `<emoji> <description à l'impératif en français>`
+- **Utiliser gitmoji**, pas les Conventional Commits (`feat:`, `fix:`, etc.)
+- Un emoji par commit, placé en début de titre
+- Corps de commit optionnel pour expliquer le « pourquoi »
+- Emojis courants pour ce projet :
+  - ✨ `:sparkles:` — nouvelle fonctionnalité / contenu
+  - 🐛 `:bug:` — correction de bug
+  - 📝 `:memo:` — documentation / contenu de slides
+  - 💄 `:lipstick:` — style, mise en page, UI
+  - ♻️ `:recycle:` — refactoring
+  - 🔧 `:wrench:` — configuration
+  - 🔥 `:fire:` — suppression de code ou de fichiers
+  - ⬆️ `:arrow_up:` — mise à jour de dépendances
+  - 🚀 `:rocket:` — déploiement / CI
+- Exemple : `✨ Ajoute l'atelier Cursor 3h (slides + TPs)`
+
 ## Paramétrage Firebase
 
 1. Modifier `.firebaserc` avec le vrai project ID Firebase
@@ -73,4 +91,5 @@ Présentation Slidev pour une formation TechTown. Langue : français.
 - Ne pas modifier le branding (couleurs, police, logo) sans demande explicite
 - Tester visuellement après modification (`npm run dev`)
 - `npm run lint` doit passer sans erreur avant commit
+- Messages de commit en **gitmoji** (voir « Conventions de commit »)
 - **JAMAIS push sur `main` directement** — toujours créer une branche + PR
