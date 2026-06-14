@@ -39,11 +39,24 @@ a {
 .slidev-layout.intro {
   background: linear-gradient(135deg, #1c63ed 0%, #1557d6 50%, #3b7eff 100%) !important;
   color: #ffffff !important;
+  height: 100% !important;
+  width: 100% !important;
 }
 
 .slidev-layout.cover p,
 .slidev-layout.intro p {
   color: rgba(255, 255, 255, 0.85) !important;
+}
+
+/* End slide (Merci) */
+.slidev-layout.end {
+  height: 100% !important;
+  width: 100% !important;
+  padding: 0 !important;
+}
+
+.slidev-layout.end h1 {
+  color: #ffffff !important;
 }
 
 /* Center layout */

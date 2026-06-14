@@ -3,7 +3,7 @@ import logo from 'slidev-theme-techtown/public/techtown-logo.svg?url'
 </script>
 
 <template>
-  <header v-if="$slidev.nav.currentLayout !== 'cover' && $slidev.nav.currentLayout !== 'intro'" class="slide-header">
+  <header v-if="$slidev.nav.currentLayout !== 'cover' && $slidev.nav.currentLayout !== 'intro' && $slidev.nav.currentLayout !== 'end'" class="slide-header">
     <img :src="logo" class="header-logo" />
   </header>
 </template>
