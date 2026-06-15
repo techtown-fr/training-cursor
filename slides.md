@@ -65,6 +65,10 @@ src: ./pages/10-canvas.md
 ---
 
 ---
+src: ./pages/16-orchestration-agents.md
+---
+
+---
 src: ./pages/11-automations.md
 ---
 

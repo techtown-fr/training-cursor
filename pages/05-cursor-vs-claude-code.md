@@ -167,6 +167,52 @@ Sources : [Cursor — Série C](https://cursor.com/fr/blog/series-c) · Forbes �
 layout: default
 ---
 
+# L'actu : Cursor s'associe à SpaceX
+
+<div class="grid grid-cols-2 gap-8 mt-6">
+
+<div>
+
+### Le partenariat (21 avr. 2026)
+
+<v-clicks>
+
+- Objectif : **accélérer l'entraînement** des modèles
+- Limite jusqu'ici = la **puissance de calcul**
+- Cursor s'appuie sur l'infra **Colossus** (xAI)
+- De quoi **décupler** les capacités des modèles
+
+</v-clicks>
+
+</div>
+
+<div>
+
+### Le deal (côté business)
+
+<v-clicks>
+
+- Option de **rachat à 60 Md$** d'ici fin d'année
+- Ou **10 Md$** pour collaborer
+- Valorisation Cursor : ~29 Md$ → 50+ Md$
+- Marché en feu : Copilot, Codex, Claude Code
+
+</v-clicks>
+
+</div>
+
+</div>
+
+<div class="mt-6 text-xs opacity-60 text-center">
+
+Sources : [cursor.com/fr/blog/spacex-model-training](https://cursor.com/fr/blog/spacex-model-training) · Boursorama (AFP)
+
+</div>
+
+---
+layout: default
+---
+
 # Du CLI à l'IDE : Claude Code → Cursor
 
 <div class="grid grid-cols-2 gap-8 mt-4">

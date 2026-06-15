@@ -24,9 +24,10 @@ layout: default
 
 - Les **fondations** : IDE IA, fork VS Code, indexation
 - **Tab / Cmd+K / Agent** : les 3 niveaux d'autonomie
+- **Recherche sémantique** & **Rules** : trouver et guider l'agent
 - La **doc** dans le contexte (`@Docs`, MCP)
 - **Composer 2.5** & le partenariat SpaceX
-- **Historique**, **canevas**, **Design Mode**, **automations**
+- **Historique**, **canevas**, **Design Mode**, **multitask**, **automations**
 
 </v-clicks>
 
@@ -42,7 +43,7 @@ layout: default
 - **Doc à jour** pour les libs externes
 - Petits pas + **checkpoints** avant les grosses modifs
 - **Plan → Agent** : cadrez avant d'exécuter
-- Stackez les rôles (génération, **revue**, vérif)
+- Stackez les rôles : génération, **revue multi-modèles**, vérif
 
 </v-clicks>
 

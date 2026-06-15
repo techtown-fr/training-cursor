@@ -157,3 +157,107 @@ layout: default
 Un bon contexte = des réponses pertinentes. C'est le levier n°1 de qualité.
 
 </div>
+
+---
+layout: default
+---
+
+# Recherche sémantique dans la codebase
+
+<div class="grid grid-cols-2 gap-8 mt-6">
+
+<div>
+
+### Deux outils, une stratégie
+
+<v-clicks>
+
+- **Instant Grep** : correspondance exacte (symbole, regex)
+- **Recherche sémantique** : trouve par le **sens** (embeddings)
+- L'agent **choisit l'outil** selon votre prompt
+- Enchaîne les deux pour les tâches complexes
+
+</v-clicks>
+
+</div>
+
+<div>
+
+### Comment ça marche
+
+<v-clicks>
+
+- Code découpé en blocs → **embeddings vectoriels**
+- Indexation auto à l'ouverture du workspace
+- Sous-agent **Explore** : recherche parallèle sans alourdir le chat
+- Vous décrivez, l'agent **trouve** — pas besoin de connaître le nom exact
+
+</v-clicks>
+
+</div>
+
+</div>
+
+<div class="mt-6 p-3 bg-blue-50 rounded-xl text-sm text-center">
+
+Exemple : « Où gère-t-on l'authentification ? » → l'agent trouve `middleware/session.ts` même sans le mot « authentication ».
+
+</div>
+
+<div class="mt-2 text-xs opacity-60 text-center">
+
+Source : [cursor.com/fr/docs/agent/tools/search](https://cursor.com/fr/docs/agent/tools/search)
+
+</div>
+
+---
+layout: default
+---
+
+# Les règles (Rules)
+
+<div class="grid grid-cols-2 gap-8 mt-6">
+
+<div>
+
+### Instructions persistantes
+
+<v-clicks>
+
+- **Projet** : `.cursor/rules/*.mdc` (versionnées)
+- **Utilisateur** : préférences globales Cursor
+- **Équipe** : règles imposées depuis le dashboard
+- **AGENTS.md** : alternative simple en Markdown
+
+</v-clicks>
+
+</div>
+
+<div>
+
+### Modes d'application
+
+<v-clicks>
+
+- **Always Apply** : à chaque session
+- **Apply Intelligently** : quand l'agent juge pertinent
+- **Specific Files** : selon un glob (`src/**/*.tsx`)
+- **Manually** : via `@ma-regle` dans le chat
+
+</v-clicks>
+
+</div>
+
+</div>
+
+<div class="mt-6 p-3 bg-amber-50 rounded-xl text-sm text-center">
+
+Créez une règle avec `/create-rule` dans le chat. Gardez-les **courtes** (&lt; 500 lignes) et **ciblées** — référez des fichiers plutôt que copier du code.
+
+</div>
+
+<div class="mt-2 text-xs opacity-60 text-center">
+
+Source : [cursor.com/fr/docs/rules](https://cursor.com/fr/docs/rules)
+
+</div>
