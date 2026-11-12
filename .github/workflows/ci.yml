@@ -9,6 +9,10 @@ on:
 permissions:
   contents: read
 
+env:
+  # No job here needs a browser; playwright-chromium cannot download one on ubuntu-26.04
+  PLAYWRIGHT_SKIP_BROWSER_DOWNLOAD: "1"
+
 jobs:
   lint:
     name: Lint & Static Analysis
