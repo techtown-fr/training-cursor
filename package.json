@@ -19,7 +19,7 @@
     ]
   },
   "dependencies": {
-    "@slidev/cli": "^52.14.1",
+    "@slidev/cli": "^52.18.0",
     "slidev-theme-techtown": "github:techtown-fr/slidev-theme"
   },
   "devDependencies": {
